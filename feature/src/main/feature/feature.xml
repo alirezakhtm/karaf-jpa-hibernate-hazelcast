@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<features name="karaf-bundle-example-${project.version}"
+          xmlns="http://karaf.apache.org/xmlns/features/v1.3.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
+
+    <feature name="khtm-jpa-hibernate-hazelcast-common" version="${project.version}">
+        <config name="org.ops4j.datasource-booking">
+            osgi.jdbc.driver.class=com.mysql.jdbc.Driver
+            databaseName=testdb;create=true
+            dataSourceName=user
+        </config>
+        <capability>
+            osgi.service;objectClass=javax.sql.DataSource;effective:=active;osgi.jndi.service.name=user
+        </capability>
+    </feature>
+
+    <feature name="khtm-jpa-hibernate-hazelcast-api" version="${project.version}">
+        <feature>transaction</feature>
+        <feature>jndi</feature>
+        <feature>pax-jdbc-config</feature>
+        <feature>pax-jdbc-h2</feature>
+        <feature>pax-jdbc-pool-dbcp2</feature>
+        <feature>jdbc</feature>
+        <feature>aries-blueprint</feature>
+        <feature>jpa</feature>
+        <feature>hibernate</feature>
+        <feature version="${project.version}">khtm-jpa-hibernate-hazelcast-common</feature>
+        <bundle>mvn:${project.groupId}/common/${project.version}</bundle>
+    </feature>
+
+    <feature name="khtm-jpa-hibernate-hazelcast-provider" version="${project.version}">
+        <feature version="${project.version}">khtm-jpa-hibernate-hazelcast-api</feature>
+        <bundle>mvn:${project.groupId}/provider/${project.version}</bundle>
+    </feature>
+
+</features>
