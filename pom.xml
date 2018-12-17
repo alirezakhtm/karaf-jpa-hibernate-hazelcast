@@ -6,13 +6,15 @@
 
     <groupId>com.khtm.example</groupId>
     <artifactId>karaf-jpa-hibernate-hazelcast</artifactId>
+    <name>KHTM :: JPA :: HIBERNATE :: HAZELCAST</name>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>common</module>
         <module>feature</module>
         <module>provider</module>
-        <module>command</module>
+        <!--<module>command</module>-->
+        <module>provider-test</module>
     </modules>
 
 

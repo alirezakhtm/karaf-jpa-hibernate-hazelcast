@@ -9,7 +9,11 @@
         <module name="command" />
         <module name="common" />
         <module name="provider" />
+        <module name="providertest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="command" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

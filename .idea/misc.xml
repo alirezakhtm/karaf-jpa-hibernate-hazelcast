@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="Osmorc" url="file://$PROJECT_DIR$/common" />
     <file type="Osmorc" url="file://$PROJECT_DIR$/provider" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/provider-test" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

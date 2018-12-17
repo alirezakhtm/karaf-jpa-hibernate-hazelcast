@@ -35,4 +35,9 @@
         <bundle>mvn:${project.groupId}/provider/${project.version}</bundle>
     </feature>
 
+    <feature name="khtm-jpa-hibernate-hazelcast-provider-test" version="${project.version}">
+        <feature version="${project.version}">khtm-jpa-hibernate-hazelcast-provider</feature>
+        <bundle>mvn:${project.groupId}/provider-test/${project.version}</bundle>
+    </feature>
+
 </features>
