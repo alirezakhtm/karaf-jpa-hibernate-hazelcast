@@ -1,10 +1,9 @@
 package com.khtm.test.kjhh.common;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "tbl_user")
 public class User {
 
     @Id
@@ -13,6 +12,7 @@ public class User {
     private String firstName;
     private String lastName;
 
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -21,6 +21,7 @@ public class User {
         this.id = id;
     }
 
+    @Column(name = "firstName")
     public String getFirstName() {
         return firstName;
     }
@@ -29,6 +30,7 @@ public class User {
         this.firstName = firstName;
     }
 
+    @Column(name = "lastName")
     public String getLastName() {
         return lastName;
     }

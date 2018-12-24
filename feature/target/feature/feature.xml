@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<features name="karaf-bundle-example-${project.version}"
+<features name="karaf-bundle-example-1.0.0-SNAPSHOT"
           xmlns="http://karaf.apache.org/xmlns/features/v1.3.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
 
     <!--
-    <feature name="khtm-jpa-hibernate-hazelcast-common" version="${project.version}">
+    <feature name="khtm-jpa-hibernate-hazelcast-common" version="1.0.0-SNAPSHOT">
         <config name="org.ops4j.datasource-user">
             osgi.jdbc.driver.class=com.mysql.jdbc.Driver
             databaseName=testdb;create=true
@@ -18,7 +18,7 @@
     </feature>
     -->
 
-    <feature name="khtm-jpa-hibernate-hazelcast-common" version="${project.version}">
+    <feature name="khtm-jpa-hibernate-hazelcast-common" version="1.0.0-SNAPSHOT">
         <!--<feature>hazelcast</feature>-->
         <config name="org.ops4j.datasource-user">
             osgi.jdbc.driver.class=org.mysql.jdbc.Driver
@@ -33,7 +33,7 @@
         </capability>
     </feature>
 
-    <feature name="khtm-jpa-hibernate-hazelcast-api" version="${project.version}">
+    <feature name="khtm-jpa-hibernate-hazelcast-api" version="1.0.0-SNAPSHOT">
         <feature>transaction</feature>
         <feature>jndi</feature>
         <feature>pax-jdbc-config</feature>
@@ -44,21 +44,21 @@
         <feature>aries-blueprint</feature>
         <feature>jpa</feature>
         <feature>hibernate</feature>
-        <feature version="${project.version}">khtm-jpa-hibernate-hazelcast-common</feature>
-        <bundle>mvn:${project.groupId}/common/${project.version}</bundle>
+        <feature version="1.0.0-SNAPSHOT">khtm-jpa-hibernate-hazelcast-common</feature>
+        <bundle>mvn:com.khtm.example/common/1.0.0-SNAPSHOT</bundle>
         <!--<configfile finalname="/etc/org.ops4j.datasource-mysql.cfg" override="true">-->
-            <!--mvn:${project.groupId}/${project.artifactId}/${project.version}/configFile/org.ops4j.datasource-mysql-->
+            <!--mvn:com.khtm.example/feature/1.0.0-SNAPSHOT/configFile/org.ops4j.datasource-mysql-->
         <!--</configfile>-->
     </feature>
 
-    <feature name="khtm-jpa-hibernate-hazelcast-provider" version="${project.version}">
-        <feature version="${project.version}">khtm-jpa-hibernate-hazelcast-api</feature>
-        <bundle>mvn:${project.groupId}/provider/${project.version}</bundle>
+    <feature name="khtm-jpa-hibernate-hazelcast-provider" version="1.0.0-SNAPSHOT">
+        <feature version="1.0.0-SNAPSHOT">khtm-jpa-hibernate-hazelcast-api</feature>
+        <bundle>mvn:com.khtm.example/provider/1.0.0-SNAPSHOT</bundle>
     </feature>
 
-    <feature name="khtm-jpa-hibernate-hazelcast-provider-test" version="${project.version}">
-        <feature version="${project.version}">khtm-jpa-hibernate-hazelcast-provider</feature>
-        <bundle>mvn:${project.groupId}/provider-test/${project.version}</bundle>
+    <feature name="khtm-jpa-hibernate-hazelcast-provider-test" version="1.0.0-SNAPSHOT">
+        <feature version="1.0.0-SNAPSHOT">khtm-jpa-hibernate-hazelcast-provider</feature>
+        <bundle>mvn:com.khtm.example/provider-test/1.0.0-SNAPSHOT</bundle>
     </feature>
 
 </features>

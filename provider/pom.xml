@@ -36,6 +36,18 @@
             <artifactId>javax.interceptor-api</artifactId>
             <version>1.2</version>
         </dependency>
+        <!-- MySQL-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+        </dependency>
+        <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.3.7.Final</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -48,7 +60,11 @@
                 <configuration>
                     <instructions>
                         <Meta-Persistence>META-INF/persistence.xml</Meta-Persistence>
-                        <Import-Package>javax.persistence;version="[2,3)",*</Import-Package>
+                        <Import-Package>
+                            javax.persistence;version="[2,3)",
+                            javax.sql,
+                            *
+                        </Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

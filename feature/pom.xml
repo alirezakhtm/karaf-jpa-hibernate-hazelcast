@@ -25,6 +25,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -36,6 +37,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>attach-artifacts</id>
@@ -49,6 +51,11 @@
                                     <file>target/feature/feature.xml</file>
                                     <type>xml</type>
                                 </artifact>
+                                <!--<artifact>-->
+                                    <!--<file>target/feature/configFile/org.ops4j.datasource-mysql.cfg</file>-->
+                                    <!--<type>cfg</type>-->
+                                    <!--<classifier>org.ops4j.datasource-mysql</classifier>-->
+                                <!--</artifact>-->
                             </artifacts>
                         </configuration>
                     </execution>

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1545656416988
+Build-Jdk: 1.8.0_131
+Built-By: a.khatamidoost
+Bundle-ManifestVersion: 2
+Bundle-Name: KHTM :: JPA :: HIBERNATE :: HAZELCAST :: PROVIDER-TEST
+Bundle-SymbolicName: com.khtm.example.provider-test
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.khtm.test.kjhh.provider.test;uses:="com.khtm.test.kj
+ hh.common";version="1.0.0"
+Import-Package: com.khtm.test.kjhh.common;version="[1.0,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Tool: Bnd-4.0.0.201805111645
